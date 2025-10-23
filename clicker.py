@@ -6,8 +6,6 @@ from pynput import mouse
 POINTS_FILE = "points.json"
 DEFAULT_INTERVAL = 0.3
 
-#  harp- minuet: 602345602020887034567020208850865434954323943212
-
 def record_points(n=7, filename=POINTS_FILE):
     print(f"Recording {n} points.")
     print("Move your mouse to the location and press Enter in this terminal.")
@@ -100,9 +98,15 @@ if __name__ == "__main__":
         record_points()
     elif num == 2:
         points = load_points(POINTS_FILE)
-        sequence = input("Enter rhythm (use 1–7 for points, 0 for rest): ").strip()
-        interval = input(f"Interval per step in seconds (default {DEFAULT_INTERVAL}): ").strip()
-        interval = float(interval) if interval else DEFAULT_INTERVAL
+        melody = input("Which melody should i play? (1-13): ")
+        match melody:
+            case "8":
+                sequence= "602345602020887034567020208850865434954323943212"
+                interval = 0.1
+            case __:
+                sequence = input("Enter rhythm (use 1–7 for points, 0 for rest): ").strip()
+                interval = input(f"Interval per step in seconds (default {DEFAULT_INTERVAL}): ").strip()
+                interval = float(interval) if interval else DEFAULT_INTERVAL
         play_melody(sequence, points, interval)
     elif num == 3:
         # Example usage
