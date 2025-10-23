@@ -106,7 +106,7 @@ if __name__ == "__main__":
                 sequence = ("7008860054000884088830882100088845000888856000886700088877654944321357").strip()
                 interval = 0.085
             case "10":
-                sequence = ("")
+                sequence = ("3070203070203070203070200103050010205001030607676760502030400607050040302032323201")
                 interval = 1.0
             case __:
                 sequence = input("Enter rhythm (use 1–7 for points, 0 for rest, 8 for little more pause, 9 for some less pause): ").strip()
