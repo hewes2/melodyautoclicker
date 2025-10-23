@@ -106,8 +106,8 @@ if __name__ == "__main__":
                 sequence = ("7008860054000884088830882100088845000888856000886700088877654944321357").strip()
                 interval = 0.085
             case "10":
-                sequence = ("300870082008300870082008300870082008300870082000081008300850000810082008500008100830086008767676008500820083008400008600870085000084008300820083232320081").strip()
-                interval = 0.09
+                sequence = ("300870082008300870082008300870082008300870082000088100883008850000881008200850000881008300860087676760085008200830084000086008700850000884008300820083232320081").strip()
+                interval = 0.08
             case __:
                 sequence = input("Enter rhythm (use 1–7 for points, 0 for rest, 8 for little more pause, 9 for some less pause): ").strip()
                 interval = input(f"Interval per step in seconds (default {DEFAULT_INTERVAL}): ").strip()
