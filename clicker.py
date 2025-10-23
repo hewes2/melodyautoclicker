@@ -101,13 +101,13 @@ if __name__ == "__main__":
         match melody:
             case "8":
                 sequence= "602345602020887034567020208850865434954323943212"
-                interval = 0.1
+                interval = 0.102
             case "9":
                 sequence = ""
                 interval = 0.1
             case __:
-                #sequence = input("Enter rhythm (use 1–7 for points, 0 for rest): ").strip()
-                sequence = "706054004030210045005600670077654044321357".strip
+                #sequence = input("Enter rhythm (use 1–7 for points, 0 for rest, 8 for little more pause, 9 for some less pause): ").strip()
+                sequence = ("706054004030210045005600670077654044321357").strip()
                 interval = input(f"Interval per step in seconds (default {DEFAULT_INTERVAL}): ").strip()
                 interval = float(interval) if interval else DEFAULT_INTERVAL
         play_melody(sequence, points, interval)
